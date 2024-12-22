@@ -10,17 +10,25 @@
             background-color: #f4f4f4;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Stellt sicher, dass der Inhalt oben bleibt */
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
+
         h1 {
-            color: #333;
-            margin-bottom: 20px;
+            color: #333;  /* Dunkle Schriftfarbe für gute Lesbarkeit */
             font-size: 2.5em;
             text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 10px;
+            text-transform: uppercase;  /* Setzt die Schrift in Großbuchstaben */
+            letter-spacing: 2px;  /* Etwas mehr Abstand zwischen den Buchstaben */
         }
+
         img {
             max-width: 90%;
             height: auto;
@@ -28,6 +36,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .info {
             background: #ffffff;
             padding: 20px;
@@ -36,11 +45,33 @@
             text-align: center;
             width: 80%;
             max-width: 600px;
+            margin-bottom: 20px;
         }
+
         .info p {
             margin: 10px 0;
             font-size: 18px;
             color: #555;
+        }
+
+        /* Mobile Ansicht */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;  /* Kleinere Schrift für mobile Geräte */
+            }
+            .info p {
+                font-size: 16px;  /* Kleinere Schrift für den Text */
+            }
+        }
+
+        /* Desktop-Ansicht */
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3em;  /* Größere Schrift für große Bildschirme */
+            }
+            .info p {
+                font-size: 20px;  /* Größere Schrift für den Text */
+            }
         }
     </style>
 </head>
