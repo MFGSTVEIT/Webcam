@@ -20,12 +20,11 @@
             margin-bottom: 20px;
             font-size: 2.5em;  /* Größere Schrift für die Überschrift */
             text-align: center;  /* Überschrift zentrieren */
-            z-index: 10;  /* Sicherstellen, dass der Text über anderen Elementen angezeigt wird */
         }
         img {
             max-width: 90%;
             height: auto;
-            margin-bottom: 20px;
+            margin-top: 20px;  /* Abstand zum vorherigen Text */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -47,13 +46,13 @@
 </head>
 <body>
     <h1>MFG-St.Veit Infos</h1>
-    <img src="webcam.jpg" alt="Webcam Bild">
     <div class="info">
         <p><strong>Batterie links:</strong> 12.56 V</p>
         <p><strong>Batterie rechts:</strong> 13.45 V</p>
         <p><strong>Innentemperatur:</strong> 22 Grad</p>
         <p><strong>Außentemperatur:</strong> 12 Grad</p>
     </div>
+    <img src="webcam.jpg" alt="Webcam Bild">
 </body>
 </html>
 
