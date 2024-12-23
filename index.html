@@ -10,7 +10,7 @@
             background-color: #f4f4f4;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Stellt sicher, dass der Inhalt oben bleibt */
+            justify-content: flex-start;
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -19,16 +19,13 @@
         }
 
         .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
             margin-bottom: 20px;
-            width: 100%;
         }
 
         .header img {
-            max-height: 80px; /* Maximale Höhe des Logos */
-            margin-right: 10px; /* Abstand zwischen Logo und Titel */
+            max-height: 100px; /* Vergrößert das Logo um 25% von 80px auf 100px */
+            margin-bottom: 10px; /* Abstand zwischen Logo und Titel */
             border-radius: 50%; /* Macht das Logo rund */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Schatten für eine ansprechende Optik */
         }
@@ -36,9 +33,9 @@
         h1 {
             color: #333;  /* Dunkle Schriftfarbe für gute Lesbarkeit */
             font-size: 2.5em;
-            text-align: center;
             text-transform: uppercase;  /* Setzt die Schrift in Großbuchstaben */
             letter-spacing: 2px;  /* Etwas mehr Abstand zwischen den Buchstaben */
+            margin: 0; /* Entfernt zusätzlichen Abstand */
         }
 
         img {
@@ -75,7 +72,7 @@
                 font-size: 16px;  /* Kleinere Schrift für den Text */
             }
             .header img {
-                max-height: 50px; /* Kleinere Größe des Logos */
+                max-height: 80px; /* Reduziertes Logo für kleinere Bildschirme */
             }
         }
 
