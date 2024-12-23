@@ -18,13 +18,23 @@
             box-sizing: border-box;
         }
 
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .header img {
+            max-height: 80px; /* Maximale Höhe des Logos */
+            margin-right: 10px; /* Abstand zwischen Logo und Titel */
+        }
+
         h1 {
             color: #333;  /* Dunkle Schriftfarbe für gute Lesbarkeit */
             font-size: 2.5em;
             text-align: center;
-            margin-bottom: 20px;
-            width: 100%;
-            padding: 10px;
             text-transform: uppercase;  /* Setzt die Schrift in Großbuchstaben */
             letter-spacing: 2px;  /* Etwas mehr Abstand zwischen den Buchstaben */
         }
@@ -62,6 +72,9 @@
             .info p {
                 font-size: 16px;  /* Kleinere Schrift für den Text */
             }
+            .header img {
+                max-height: 50px; /* Kleinere Größe des Logos */
+            }
         }
 
         /* Desktop-Ansicht */
@@ -76,7 +89,10 @@
     </style>
 </head>
 <body>
-    <h1>MFG-St.Veit Infos</h1>
+    <div class="header">
+        <img src="logo.png" alt="Logo">
+        <h1>MFG-St.Veit Infos</h1>
+    </div>
     <div class="info">
         <p><strong>Batterie links:</strong> 12.56 V</p>
         <p><strong>Batterie rechts:</strong> 13.45 V</p>
