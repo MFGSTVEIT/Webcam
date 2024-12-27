@@ -5,106 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MFG-St.Veit Infos</title>
     <style>
+        /* Grundlegendes Styling für die gesamte Seite */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Schriftart für die Seite */
+            background-color: #f4f4f4; /* Helle Hintergrundfarbe */
+            display: flex; /* Flexbox für Layout */
+            flex-direction: column; /* Anordnung der Elemente von oben nach unten */
+            justify-content: flex-start; /* Elemente am oberen Rand ausrichten */
+            align-items: center; /* Zentrierung der Elemente horizontal */
+            height: 100vh; /* Vollständige Höhe des Viewports */
+            margin: 0; /* Kein Außenabstand */
+            padding: 20px; /* Innenabstand */
+            box-sizing: border-box; /* Einschließen von Padding und Border in die Maße */
         }
 
+        /* Styling für den Header-Bereich */
         .header {
-            text-align: center;
-            margin-bottom: 20px;
+            text-align: center; /* Zentriert den Inhalt des Headers */
+            margin-bottom: 20px; /* Abstand nach unten */
         }
 
+        /* Styling für den Footer-Bereich */
         .footer {
-            text-align: center;
-            font-size: 0.8em;
-            margin-bottom: 8px;
+            text-align: center; /* Zentriert den Text */
+            font-size: 0.8em; /* Kleinere Schriftgröße */
+            margin-bottom: 8px; /* Abstand nach unten */
         }
 
+        /* Styling für das Logo im Header */
         .header img {
-            max-height: 150px; /* Vergrößert das Logo auf 150px */
+            max-height: 150px; /* Maximale Höhe des Logos */
             margin-bottom: 10px; /* Abstand zwischen Logo und Titel */
             border-radius: 50%; /* Macht das Logo rund */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Schatten für eine ansprechende Optik */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für das Logo */
         }
 
+        /* Styling für den Haupttitel */
         h1 {
-            color: #333;  /* Dunkle Schriftfarbe für gute Lesbarkeit */
-            font-size: 2.5em;
-            text-transform: uppercase;  /* Setzt die Schrift in Großbuchstaben */
-            letter-spacing: 2px;  /* Etwas mehr Abstand zwischen den Buchstaben */
-            margin: 0; /* Entfernt zusätzlichen Abstand */
+            color: #333; /* Dunklere Schriftfarbe */
+            font-size: 2.5em; /* Große Schriftgröße */
+            text-transform: uppercase; /* Großbuchstaben */
+            letter-spacing: 2px; /* Zusätzlicher Buchstabenabstand */
+            margin: 0; /* Kein Abstand */
         }
 
+        /* Styling für das Bild (z. B. Webcam) */
         img {
-            max-width: 90%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%; /* Maximale Breite des Bildes relativ zur Seite */
+            height: auto; /* Beibehaltung des Seitenverhältnisses */
+            margin-top: 20px; /* Abstand nach oben */
+            border-radius: 8px; /* Abgerundete Ecken */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
         }
 
+        /* Styling für den Info-Bereich */
         .info {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 80%;
-            max-width: 600px;
-            margin-bottom: 20px;
+            background: #ffffff; /* Weißer Hintergrund */
+            padding: 20px; /* Innenabstand */
+            border-radius: 8px; /* Abgerundete Ecken */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für den Info-Container */
+            text-align: center; /* Zentrierter Text */
+            width: 80%; /* Breite relativ zur Seite */
+            max-width: 600px; /* Maximale Breite */
+            margin-bottom: 20px; /* Abstand nach unten */
         }
 
+        /* Styling für normalen Text innerhalb des Info-Bereichs */
         .info p {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #555;
+            margin: 10px 0; /* Abstand oben und unten */
+            font-size: 18px; /* Schriftgröße */
+            color: #555; /* Mitteldunkle Schriftfarbe */
         }
 
-        /* Mobile Ansicht */
+        /* Styling für hervorgehobene Überschrift (Telemetriewerte) */
+        .info .highlight {
+            font-size: 1.7em; /* Größere Schriftgröße */
+            font-weight: bold; /* Fette Schrift */
+            color: #333333; /* Dunkle Schriftfarbe */
+            margin-bottom: 20px; /* Abstand nach unten */
+            text-transform: uppercase; /* Großbuchstaben */
+            letter-spacing: 1px; /* Zusätzlicher Buchstabenabstand */
+        }
+
+        /* Anpassungen für mobile Ansicht */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2em;  /* Kleinere Schrift für mobile Geräte */
+                font-size: 2em; /* Kleinere Schriftgröße für Titel */
             }
             .info p {
-                font-size: 16px;  /* Kleinere Schrift für den Text */
+                font-size: 16px; /* Kleinere Schriftgröße für Info-Text */
             }
             .header img {
-                max-height: 80px; /* Reduziertes Logo für kleinere Bildschirme */
+                max-height: 80px; /* Kleinere Höhe des Logos */
             }
         }
 
-        /* Desktop-Ansicht */
+        /* Anpassungen für Desktop-Ansicht */
         @media (min-width: 1024px) {
             h1 {
-                font-size: 3em;  /* Größere Schrift für große Bildschirme */
+                font-size: 3em; /* Größere Schriftgröße für Titel */
             }
             .info p {
-                font-size: 20px;  /* Größere Schrift für den Text */
+                font-size: 20px; /* Größere Schriftgröße für Info-Text */
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header-Bereich mit Logo und Titel -->
     <div class="header">
         <img src="logo.png" alt="Logo">
-        <h1>MFG-St.Veit Infos</h1>
+        <h1>MFG-St.Veit</h1>
     </div>
+
+    <!-- Info-Bereich mit Telemetriedaten -->
     <div class="info">
+        <!-- Hervorgehobene Überschrift -->
+        <p class="highlight">Telemetriewerte Flugplatz</p>
+        <!-- Verschiedene Telemetriewerte -->
         <p><strong>Batterie links:</strong> 12.56 V</p>
         <p><strong>Batterie rechts:</strong> 13.45 V</p>
         <p><strong>Innentemperatur:</strong> 22 Grad</p>
         <p><strong>Außentemperatur:</strong> 12 Grad</p>
     </div>
+
+    <!-- Webcam-Bild -->
     <img src="webcam.jpg" alt="Webcam Bild">
+
+    <!-- Footer mit Urheberrechtsinformationen -->
     <div class="footer">
         <p>MFG-St.Veit/Glan 2025</p>
     </div>
