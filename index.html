@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFG-St.Veit Infos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2efef;  /* Helle Hintergrundfarbe f4f4f4 */ 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+
+        .header img {
+            max-height: 150px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            margin: 20px auto; /* Zentriert das Bild */
+            display: block; /* Damit `margin: auto` wirkt */
+            border-radius: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+            cursor: pointer;
+        }
+
+
+        .info {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .info .highlight {
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .info p {
+                font-size: 16px;
+            }
+            .header img {
+                max-height: 80px;
+            }
+            .info .highlight {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3em;
+            }
+            .info p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo">
+        <h1>MFG-St.Veit</h1>
+    </div>
+
+    <a href="webcam.jpg" target="_blank">
+        <img src="webcam.jpg" alt="Webcam Bild">
+    </a>
+
+    <div class="info">
+        <p class="highlight">Telemetriewerte Flugplatz</p>
+        <p><strong>Batterie links:</strong> 15.47 V</p>
+        <p><strong>Batterie rechts:</strong> 14.56 V</p>
+        <p><strong>Innentemperatur:</strong> 0.0 Grad</p>
+        <p><strong>Außentemperatur:</strong> 14.5 Grad</p>
+    </div>
+
+    <div class="footer">
+        <p>MFG-St.Veit/Glan - aktualisiert am 2026-03-01 16:15:07
+    </div>
+</body>
+</html>
